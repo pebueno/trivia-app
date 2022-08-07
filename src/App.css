@@ -1,38 +1,110 @@
+body {
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+  background: #a7a7a7;
+  box-shadow: 0 0 0 2px #a7a7a7;
+}
+
 .App {
   text-align: center;
+  padding-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game {
+  width: 375px;
+  min-height: 668px;
+  margin: auto;
+  background-color: rgb(221 221 221);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+#card {
+  margin: 0 10%;
+  padding: 0 10%;
+  height: 250px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: solid 2px black;
+}
+#card p {
+  font-size: 23px;
+  font-weight: 500;
+  transform: scaleY(1.1);
+
 }
 
-.App-link {
-  color: #61dafb;
+#answer {
+  display: grid;
+  /* justify-content: center; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#answer .true {
+  background-color: green;
+  align-content: flex-end;
+}
+
+#answer .false {
+  background-color: red;
+}
+
+.intro div {
+  margin: 0 20%;
+}
+.intro h3 {
+  font-weight: 900;
+  margin-block-start: 0.4em;
+}
+
+.intro p {
+  font-weight: 400;
+  transform: scaleY(1.1);
+}
+
+.result {
+  /* padding: 15px 0; */
+  font-size: 20px;
+  font-weight: 400;
+  color: #818181;
+  text-align: initial;
+  margin: 10% 5%;
+}
+
+.result div span {
+  font-size: 35px;
+  padding-right: 10px;
+  margin-block-start: 0;
+
+}
+
+.result div {
+  display: flex;
+}
+
+.result div p {
+  margin-block-start: 0;
+
 }

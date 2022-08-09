@@ -1,15 +1,12 @@
 body {
-  font-size: 22px;
+  font-size: 20px;
   font-family: sans-serif;
 }
 
 button,
 input[type="submit"],
 input[type="reset"] {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  width: fit-content;
   background: none;
   color: inherit;
   border: none;
@@ -28,17 +25,19 @@ input[type="reset"]:active {
 
 .App {
   text-align: center;
-  padding-top: 50px;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .game {
-  width: 375px;
-  min-height: 668px;
+  width: 50%;
   margin: auto;
   background-color: rgb(221 221 221);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: solid 1px #6b6666;
 }
 
 #card {
@@ -48,35 +47,37 @@ input[type="reset"]:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 2px black;
+  border: solid 1px black;
 }
 #card p {
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 500;
   transform: scaleY(1.1);
-
 }
 
 #answer {
   display: grid;
-  /* justify-content: center; */
+  justify-content: center;
+  margin-bottom: 5%;
 }
 
 #answer .true {
   background-color: green;
   align-content: flex-end;
+  margin: 5% 5% 5% 5%;
 }
 
 #answer .false {
   background-color: red;
+  margin: 5% 5% 5% 5%;
 }
 
 .intro div {
-  margin: 0 20%;
+  margin: 20% 20% 20% 20%;
 }
 .intro h3 {
   font-weight: 900;
-  margin-block-start: 0.4em;
+  margin-block-start: 10%;
 }
 
 .intro p {
@@ -84,20 +85,22 @@ input[type="reset"]:active {
   transform: scaleY(1.1);
 }
 
+.btnBegin{
+  margin-bottom: 5%;
+}
+
 .result {
-  /* padding: 15px 0; */
   font-size: 20px;
   font-weight: 400;
   color: #818181;
   text-align: initial;
-  margin: 10% 5%;
+  margin: 5% 5%;
 }
 
 .result div span {
-  font-size: 35px;
-  padding-right: 10px;
+  font-size: 30px;
+  padding-right: 2%;
   margin-block-start: 0;
-
 }
 
 .result div {
@@ -106,5 +109,8 @@ input[type="reset"]:active {
 
 .result div p {
   margin-block-start: 0;
+}
 
+.playAgain {
+  margin: auto auto 5% auto;
 }

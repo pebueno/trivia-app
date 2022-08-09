@@ -30,7 +30,7 @@ function App() {
   if (count === 0) {
     app = (
       <Intro>
-        <button onClick={() => setCount(count + 1)}>BEGIN</button>
+        <button className="btnBegin" onClick={() => setCount(count + 1)}>BEGIN</button>
       </Intro>
     );
   } else if (count === 11) {
@@ -60,7 +60,8 @@ function App() {
           })}
         </div>
 
-        <button
+        <button 
+          className="playAgain"
           onClick={() => {
             setCount(0);
             setAnswers([]);
